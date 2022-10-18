@@ -9,6 +9,7 @@
 
 #if defined(ANDROID)
 #define ALOGE(...) __android_log_print(ANDROID_LOG_ERROR, "hello_xr", __VA_ARGS__)
+#define ALOGD(...) __android_log_print(ANDROID_LOG_DEBUG, "hello_xr", __VA_ARGS__)
 #define ALOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, "hello_xr", __VA_ARGS__)
 #endif
 
@@ -53,7 +54,7 @@ void Write(Level severity, const std::string& msg) {
 #endif
 #if defined(ANDROID)
     if (severity == Level::Error)
-        ALOGE("%s", out.str().c_str());
+        ALOGD("%s", out.str().c_str());
     else
         ALOGV("%s", out.str().c_str());
 #endif
