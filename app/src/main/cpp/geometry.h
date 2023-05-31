@@ -49,4 +49,15 @@ constexpr unsigned short c_cubeIndices[] = {
     30, 31, 32, 33, 34, 35,  // +Z
 };
 
+constexpr XrVector3f c_quadVertices[] = {
+        //bottom triangle
+        {-1.0f, -1.0f, 0.0f},
+        {1.0f, -1.0f, 0.0f},
+        {-1.0f, 1.0f, 0.0f},
+        //top triangle
+        {1.0f, -1.0f, 0.0f},
+        {1.0f, 1.0f, 0.0f},
+        {-1.0f, 1.0f, 0.0f}
+};
+
 }  // namespace Geometry
